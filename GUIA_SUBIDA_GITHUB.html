@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guía de subida a GitHub — FSS Almacén</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 20px;background:#f5f5f5;color:#1a1a1a}
+h1{color:#4a2a0e;font-size:22px;margin-bottom:4px}
+.sub{color:#7a6040;font-size:14px;margin-bottom:28px}
+.step{background:#fff;border-radius:12px;padding:20px 22px;margin-bottom:14px;border:1px solid #e0d8cc;position:relative}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#4a2a0e;color:#fff;border-radius:50%;font-size:13px;font-weight:700;flex-shrink:0;margin-right:10px}
+.step-title{font-size:15px;font-weight:700;color:#4a2a0e;display:flex;align-items:center;margin-bottom:12px}
+p,li{font-size:14px;color:#333;line-height:1.6;margin-bottom:6px}
+ul{margin:8px 0 8px 18px}
+.url{background:#1a1a2e;color:#6ddb6d;font-family:monospace;padding:10px 14px;border-radius:8px;font-size:13px;margin:10px 0;word-break:break-all}
+.note{background:#fff8e6;border-left:3px solid #f0a500;padding:10px 14px;border-radius:0 8px 8px 0;font-size:13px;margin:10px 0;color:#7a5000}
+.ok{background:#e8f6e8;border-left:3px solid #5a8827;padding:10px 14px;border-radius:0 8px 8px 0;font-size:13px;margin:10px 0;color:#3d5e1a}
+.files{background:#f8f5f0;border:1px solid #e0d8cc;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;font-family:monospace;line-height:1.8}
+.files .folder{color:#4a2a0e;font-weight:700}
+.files .file{color:#0369a1;margin-left:20px}
+kbd{background:#eee;border:1px solid #ccc;border-radius:4px;padding:1px 6px;font-size:12px;font-family:monospace}
+.done{background:#3d5e1a;color:#fff;border-radius:12px;padding:20px 22px;margin-bottom:14px;text-align:center}
+.done h2{color:#fff;font-size:18px;margin-bottom:6px}
+.done p{color:rgba(255,255,255,.85);margin:0}
+img.sc{width:100%;border-radius:8px;border:1px solid #e0d8cc;margin:8px 0}
+</style>
+</head>
+<body>
+
+<h1>📋 Guía: Subir la app a GitHub</h1>
+<div class="sub">Sigue estos pasos en orden. Al final tendrás una URL que puedes enviar por WhatsApp.</div>
+
+<!-- PASO 1 -->
+<div class="step">
+  <div class="step-title"><span class="step-num">1</span>Crear cuenta en GitHub (si no tienes)</div>
+  <p>Ve a <strong>github.com</strong> y pulsa <strong>Sign up</strong>.</p>
+  <p>Rellena: email, contraseña y nombre de usuario.<br>
+  Elige un nombre sencillo, por ejemplo: <strong>frutosecossaez</strong></p>
+  <p>Verifica tu email cuando llegue el correo de confirmación.</p>
+  <div class="note">⚠️ Si ya tienes cuenta de GitHub, salta al Paso 2.</div>
+</div>
+
+<!-- PASO 2 -->
+<div class="step">
+  <div class="step-title"><span class="step-num">2</span>Crear el repositorio</div>
+  <p>Una vez dentro de GitHub:</p>
+  <ul>
+    <li>Pulsa el botón verde <strong>New</strong> (arriba a la izquierda)</li>
+    <li>En <em>Repository name</em> escribe: <strong>almacen</strong></li>
+    <li>Selecciona <strong>Public</strong></li>
+    <li>Deja todo lo demás sin tocar</li>
+    <li>Pulsa <strong>Create repository</strong></li>
+  </ul>
+</div>
+
+<!-- PASO 3 -->
+<div class="step">
+  <div class="step-title"><span class="step-num">3</span>Subir los archivos</div>
+  <p>En la página del repositorio recién creado verás un enlace que dice <strong>"uploading an existing file"</strong>. Púlsalo.</p>
+  <p>Se abre una pantalla donde puedes arrastrar archivos. <strong>Tienes que subir respetando las carpetas</strong>. Hazlo en este orden:</p>
+
+  <p><strong>Primero</strong> — arrastra los archivos de la raíz:</p>
+  <div class="files">
+    <span class="file">index.html</span><br>
+    <span class="file">manifest.json</span><br>
+    <span class="file">sw.js</span>
+  </div>
+  <p>Pulsa <strong>Commit changes</strong> (botón verde abajo). Escribe como mensaje: <em>archivos raíz</em>.</p>
+
+  <p><strong>Después</strong> — sube la carpeta <strong>css</strong>:<br>
+  Pulsa <em>Add file → Upload files</em> → arrastra el archivo <strong>css/style.css</strong>.<br>
+  GitHub detecta la barra y crea la carpeta automáticamente.<br>
+  Commit: <em>css</em>.</p>
+
+  <p><strong>Después</strong> — sube la carpeta <strong>js</strong>:<br>
+  Arrastra <strong>js/app.js</strong> y <strong>js/config.js</strong> juntos.<br>
+  Commit: <em>js</em>.</p>
+
+  <p><strong>Después</strong> — sube la carpeta <strong>img</strong>:<br>
+  Arrastra <strong>img/icon-192.png</strong> y <strong>img/icon-512.png</strong>.<br>
+  Commit: <em>img</em>.</p>
+
+  <div class="note">💡 Truco: puedes arrastrar carpetas enteras directamente en Chrome. Prueba arrastrando la carpeta <strong>css</strong> completa de una vez.</div>
+</div>
+
+<!-- PASO 4 -->
+<div class="step">
+  <div class="step-title"><span class="step-num">4</span>Activar GitHub Pages (la URL pública)</div>
+  <ul>
+    <li>En tu repositorio, pulsa <strong>Settings</strong> (pestaña arriba)</li>
+    <li>En el menú de la izquierda busca <strong>Pages</strong></li>
+    <li>En <em>Branch</em> selecciona <strong>main</strong></li>
+    <li>En la carpeta selecciona <strong>/ (root)</strong></li>
+    <li>Pulsa <strong>Save</strong></li>
+  </ul>
+  <p>Espera <strong>1-2 minutos</strong> y recarga la página. Aparecerá un mensaje verde con tu URL:</p>
+  <div class="url">https://frutosecossaez.github.io/almacen</div>
+  <div class="ok">✓ Esa es la URL que envías a los empleados. Ya está activa.</div>
+</div>
+
+<!-- PASO 5 -->
+<div class="step">
+  <div class="step-title"><span class="step-num">5</span>Conectar con Google Apps Script</div>
+  <p>La URL de GitHub solo sirve para abrir la app. Los datos se guardan en Google.<br>
+  Si aún no has conectado el Apps Script, abre <strong>js/config.js</strong> desde GitHub:</p>
+  <ul>
+    <li>En el repositorio pulsa la carpeta <strong>js</strong> → <strong>config.js</strong></li>
+    <li>Pulsa el icono del lápiz ✏️ (editar)</li>
+    <li>Cambia <code>PEGAR_URL_APPS_SCRIPT_AQUI</code> por tu URL de Apps Script</li>
+    <li>Pulsa <strong>Commit changes</strong></li>
+  </ul>
+  <p>La app se actualiza sola en 1 minuto. No hay que avisar a nadie ni reenviar nada.</p>
+  <div class="ok">✓ Desde ese momento todos los dispositivos guardan y leen datos en tiempo real.</div>
+</div>
+
+<!-- PASO 6 -->
+<div class="step">
+  <div class="step-title"><span class="step-num">6</span>Enviar a los empleados</div>
+  <p>Copia tu URL y envíala por WhatsApp, email o como prefieras:</p>
+  <div class="url">https://TU-USUARIO.github.io/almacen</div>
+  <p>El empleado abre el enlace en el móvil → Chrome pregunta si quiere instalarla → pulsa <strong>Instalar</strong> → queda como icono en la pantalla de inicio, igual que cualquier app.</p>
+  <div class="note">📱 En iPhone: abrir en Safari → botón compartir ↑ → "Añadir a pantalla de inicio"</div>
+</div>
+
+<!-- CUANDO HAGAS CAMBIOS -->
+<div class="step">
+  <div class="step-title">🔄 Cuando quieras cambiar algo en la app</div>
+  <p>No hay que avisar a nadie ni reenviar el enlace.</p>
+  <ul>
+    <li>Ve a github.com → tu repositorio</li>
+    <li>Pulsa el archivo que quieres cambiar (ej: <strong>js/config.js</strong>)</li>
+    <li>Pulsa el lápiz ✏️ → edita → <strong>Commit changes</strong></li>
+    <li>En 1-2 minutos todos los empleados ven la versión nueva al recargar</li>
+  </ul>
+  <div class="ok">✓ Un solo enlace para siempre. Los datos nunca se pierden.</div>
+</div>
+
+</body>
+</html>
